@@ -3,3 +3,24 @@ This package contains scripts to automate various day to day tasks.
 All scripts are release under New BSD License.
 
 
+Guidelines for Developers
+=================================
+
+* Always keep the firstline of the script as
+    #!/usr/bin/env python
+    or
+    #!/usr/bin/env bash
+
+* Put these three lines in every script
+    # Version = $Revision$
+    # Last Modified on $Date$
+    # By $Author$
+    # $Source$
+
+* For Bash scripts, get the log file name as
+    LOG="`dirname $0`/logs/$0.log"
+
+* To redirect all stdout and stderr to LOG
+    exec >> $LOG 2>&1
+
+
