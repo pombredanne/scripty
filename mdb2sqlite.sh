@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x
+#set -x
 
 if [ $# -ne 1 ]
 then
@@ -9,7 +9,10 @@ fi
 
 mdb_file=$1
 sqlite_db=$1.sqlite
-temp_file=/tmp/$1.tmp
+temp_file=$1.tmp
+
+# Delete the db if already exists
+rm ${sqlite_db}
 
 # Create schema
 mdb-schema ${mdb_file} oracle | sqlite3 ${sqlite_db}
@@ -18,7 +21,7 @@ for table in `mdb-tables ${mdb_file}`
 do
 
 echo Processing ${table}
-mdb-export -H -d "|||" ${mdb_file} ${table} >${temp_file}
+mdb-export -Q -H -d "|||" ${mdb_file} ${table} >${temp_file}
     
 sqlite3 ${sqlite_db} << _EOF_QUERY
 .separator "|||"
@@ -26,3 +29,5 @@ sqlite3 ${sqlite_db} << _EOF_QUERY
 _EOF_QUERY
 
 done
+
+rm ${temp_file}
