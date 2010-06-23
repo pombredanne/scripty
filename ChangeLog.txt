@@ -1,3 +1,4 @@
+Version 4 	 2010-06-23 	 Added ps_mem 
 Version 3 	 2010-05-06 	 New: Automatically creating ChangeLog.txt 
 Version 2 	 2010-05-06 	 Create version.py file 
 Version 1 	 2010-05-05 	 Added mdb2sqlite 
