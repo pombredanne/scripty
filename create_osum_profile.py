@@ -2,7 +2,7 @@
 This script creates a new profile on osum.sun.com and adds it to the College group.
 
 How to use it?
-    1. Create a CSV file named students.csv and place it in the same directory as this script.
+    1. Create a CSV file named students.csv and place it in the current working directory.
     2. The format of the CSV file:
        Register_Number, First_Name, Last_Name, Month of DOB, Day of DOB, Year of DOB
        
@@ -18,7 +18,7 @@ How to use it?
         LINES TERMINATED BY '\n'; 
         
     3. If there are any photos, rename them as register_number_capital.jpg and put them in photos directory 
-        directly under the same directory as this script.
+        directly under the current working directory.
         
     4. Run Selenium Server
         java -jar /path_to_selenium/selenium-server-1.0.3/selenium-server.jar
@@ -34,7 +34,6 @@ import time, datetime
 import os
 
 
-
 class OSUM(unittest.TestCase):
     def setUp(self):
         self.verificationErrors = []
@@ -46,6 +45,7 @@ class OSUM(unittest.TestCase):
         students = csv.reader(open('students.csv'))
         
         for student in students:
+            
             name = student[1] + " " + student[2]
             photo =  os.getcwd() + '/photos/' + student[0].upper() + '.jpg' 
             email_id = student[0] + "@rmv.ac.in"
@@ -57,6 +57,7 @@ class OSUM(unittest.TestCase):
             
             sel = self.selenium
             sel.set_speed(1000)
+            sel.delete_all_visible_cookies()
 
             sel.open("main/authorization/signUp")
             sel.wait_for_page_to_load("60000")

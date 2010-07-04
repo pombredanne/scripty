@@ -1,3 +1,4 @@
+Version 5 	 2010-06-23 	 Script to create OSUM profile 
 Version 4 	 2010-06-23 	 Added ps_mem 
 Version 3 	 2010-05-06 	 New: Automatically creating ChangeLog.txt 
 Version 2 	 2010-05-06 	 Create version.py file 
