@@ -6,13 +6,14 @@ then
   exit 1
 fi
 
-/opt/nginx/sbin/nginx -s quit
-/opt/nginx/sbin/nginx
+service redmine restart
 
 urls=`find /var/www/cache -name \* | \
-      xargs grep -h --binary-files=text "KEY:" | \
+      xargs grep --files-without-match --binary-files=text "Status: 404" | \
+      xargs grep --no-filename --binary-files=text "KEY:" | \
       sed -e 's/KEY: //' | \
-      sort`
+      sort | uniq | \
+      tee /var/www/redmine_urls.txt`
 
 rm -rf /var/www/cache/*
 
@@ -21,5 +22,4 @@ do
   wget -O - $url >/dev/null
 done
 
-/opt/nginx/sbin/nginx -s quit
-/opt/nginx/sbin/nginx
+service redmine restart
