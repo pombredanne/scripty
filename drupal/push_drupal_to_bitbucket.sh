@@ -1,9 +1,6 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 
 drupal_root=/var/www/drupal/
-LOG="/var/log/`basename $0`.log"
-
-exec >> $LOG 2>&1
 
 cd ${drupal_root}
 

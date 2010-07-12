@@ -19,7 +19,7 @@ rm -rf /var/www/cache/*
 
 for url in $urls
 do
-  wget -O - $url >/dev/null
+  wget -q -O - $url >/dev/null
 done
 
 service redmine restart

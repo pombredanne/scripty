@@ -10,8 +10,6 @@ ping_command="host"
 #ping_command="echo"
 #INTERVAL_BETWEEN_RETRIES=0
 
-
-LOG="/var/log/`basename $0`.log"
 tmp_dir=/tmp
 apps_to_run=~/run_apps_when_online.txt
 
@@ -30,7 +28,7 @@ do
         then
             #Now we are doubly sure that internet connection is up.
             #Go ahead.
-            echo "`date` : Internet Connection is up. " >> ${LOG}
+            echo "`date` : Internet Connection is up. "
 
         while read app
         do
