@@ -1,3 +1,4 @@
+Version 12 	 2010-07-12 	 Added permissions 
 Version 11 	 2010-07-12 	 Imported scripts from rmv.ac.in 
 Version 10 	 2010-07-12 	 Lot of new scripts imported 
 Version 9 	 2010-07-12 	 Added some more config files 
