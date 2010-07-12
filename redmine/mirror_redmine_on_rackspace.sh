@@ -5,7 +5,6 @@ source_dirs="
 /var/www/svn/
 /var/www/hg/
 /var/www/project_docs/
-/tmp/redmine.sql
 "
 
 LOG="/var/log/`basename $0`.log"
@@ -31,13 +30,13 @@ do
     echo "`date` : Syncing ${f} " >> $LOG
     rsync -avz --delete --progress ${f} ${MYSERVER}:${f}
 done
-    
-echo "`date` : Running update on remote machine" >> $LOG    
-ssh ${MYSERVER} /home/rmvadmin/scripts/redmine_update.sh 
+
+echo "`date` : Running update on remote machine" >> $LOG
+ssh ${MYSERVER} $HOME/scripts/scripty/redmine/update_redmine_on_server.sh
 
 sudo network-config -ta LAN
 
-echo "`date` : Script finished" >> $LOG 
+echo "`date` : Script finished" >> $LOG
 
 
 
