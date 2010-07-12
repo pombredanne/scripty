@@ -1,16 +1,17 @@
 # min hour dom mon dow command
 
-scripty = $HOME/scripts/scripty
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/homr/rmvadmin/scripts/scripty
+scripty=/home/rmvadmin/scripts/scripty
 
 ###################### Drupal Related #######################
 # Run drupal cron
 @daily wget -O - -t 1 http://rmv.ac.in/supercron.php >/dev/null 2>&1
 
 # Push Drupal website to Bitbuket private repository
-0 4 * * * $scripty/drupal/push_drupal_to_bitbucket.sh >/dev/null 2>&1
+0 4 * * * run_script $scripty/drupal/push_drupal_to_bitbucket.sh
 
 # Fill Cache
-0 3 * * * $scripty/drupal/fill_boost_cache.sh >/dev/null 2>&1
+0 3 * * * run_script $scripty/drupal/fill_boost_cache.sh
 
 ###################### Redmine Related #######################
 #Freeup memeory used by ruby process (redmine)
@@ -19,13 +20,16 @@ scripty = $HOME/scripts/scripty
 
 ###################### Backups #######################
 # Take mysql backup
-@hourly  $scripty/mysql/backup_mysql.sh >/dev/null 2>&1
+@hourly run_script $scripty/mysql/backup_mysql.sh
+
+# Sync Repos in Bitbucket to GoogleCode and SF
+@daily run_script $scripty/backup/backup_mercurial_repos.sh
+
+# Refresh local repos
+@daily run_script $scripty/backup/sync_mercurial_repos.sh
+
 
 ###################### Misc #######################
 
 # Send Birthday greetings everyday at 5am
 0 5 * * * python $HOME/vidyalaya_apps/cron/cron_jobs.py >/dev/null 2>&1
-
-# Sync Repos in Bitbucket to GoogleCode
-@daily $scripty/backup/backup_mercurial_repos.sh >/dev/null 2>&1
-

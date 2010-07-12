@@ -1,26 +1,24 @@
 # min hour dom mon dow command
 
-scripty = $HOME/scripts/scripty
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/homr/rmvadm/scripts/scripty
+scripty=/home/rmvadm/scripts/scripty
 
 ###################### Redmine Related #######################
 # Run HgRedmine Proxy
-@reboot $scripty/redmine/run_hgredmine_proxy.sh >/dev/null 2>&1
+@reboot run_script $scripty/redmine/run_hgredmine_proxy.sh
 
 # Refresh commit info in projects
 */5 * * * *  ruby /var/www/redmine/script/runner "Repository.fetch_changesets" -e production >/dev/null 2>&1
-
-# Create Hg Repos - Should be done manually
-# */5 * * * *  /home/rmvadm/scripts/create_hg_repos_for_redmine.py >/dev/null 2>&1
 
 # Create SVN Repos - Should be run as root
 */5 * * * *  sudo $scripty/redmine/create_svn_repos_for_redmine.sh >/dev/null 2>&1
 
 # Mirror to Rackspace Server (projects.rmv.ac.in)
-#0 17 * * * /home/rmvadm/scripts/mirror_redmine_on_rackspace.sh >/dev/null 2>&1
+0 17 * * mon,thu run_script $scripty/redmine/mirror_redmine_on_rackspace.sh
 
 ################ Backups #################################
 # Backup using rdiff-backup (un-encrypted)
-0 * * * *  $scripty/backup/backup_rmv_intranet_using_rdiff.sh >/dev/null 2>&1
+@hourly run_script $scripty/backup/backup_rmv_intranet_using_rdiff.sh
 
-# Save duplicity backups to the Windows Server
-30 16 * * * $scripty/backup/backup_rmv_intranet_to_lan_server.sh >/dev/null 2>&1
+# Save rdiff backups to the Windows Server
+30 16 * * * run_script $scripty/backup/backup_rmv_intranet_to_lan_server.sh
