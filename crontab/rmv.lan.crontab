@@ -1,6 +1,6 @@
 # min hour dom mon dow command
 
-scripty = $HOME/scripts/scripty
+scripty=$HOME/scripts/scripty
 
 ###################### Redmine Related #######################
 # Run HgRedmine Proxy
@@ -24,3 +24,7 @@ scripty = $HOME/scripts/scripty
 
 # Save duplicity backups to the Windows Server
 30 16 * * * $scripty/backup/backup_rmv_intranet_to_lan_server.sh >/dev/null 2>&1
+
+############### Misc #######################################
+# Shut down the system at 6:30 pm
+30 18 * * * sudo halt >/dev/null 2>&1

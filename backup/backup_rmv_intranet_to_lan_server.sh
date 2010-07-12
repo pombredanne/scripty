@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-DEST=/media/lan_server
+DEST=/media/lan_server/
 
 LOG="/var/log/`basename $0`.log"
 
 echo "`date` : Script Started" >> ${LOG}
 
 export PASSWD=
-smbmount //192.168.2.254/f\$/intranet_backup ${DEST} -o user=mca1 password=
+smbmount //192.168.2.253/E\$/intranet_backup ${DEST} -o user=SERVERMCA/bca3 password=
 
 if [ ! -d ${DEST}/backup ]
 then
@@ -22,7 +22,7 @@ echo "`date` : Zipping" >> ${LOG}
 
 ############ Push to Server ####################
 echo "`date` : Pushing to Server" >> ${LOG}
-rsync -avz --delete /backup ${DEST}
+rsync -avz --delete /backup/rmv_lan_intranet.zip ${DEST}/backup
 
 smbumount ${DEST}
 
