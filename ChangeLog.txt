@@ -1,3 +1,4 @@
+Version 15 	 2010-07-12 	 Removing vidyalaya_active_directory as it is merged with vidyalaya_config 
 Version 14 	 2010-07-12 	 Added script to mirror redmine projects on laptop 
 Version 13 	 2010-07-12 	 Added run_apps_when_online.sh 
 Version 12 	 2010-07-12 	 Added permissions 
