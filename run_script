@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]
+then
+    echo -e "\n Usage : $0 <script_name>"
+    echo -e " Exiting... \n"
+    exit 1
+fi
+
+if [ ! -w /var/log ]
+then
+    echo -e "\n /var/log is not writable."
+    echo -e " Exiting... \n"
+    exit 1
+fi
+
+LOG="/var/log/`basename $1`.log"
+exec >> $LOG 2>&1
+
+echo ""
+echo "---------------------------------------------"
+echo "$(date +"%F %T %Z") : $1 Started"
+
+source $@
+
+echo "$(date +"%F %T %Z") : $1 Finished"
+echo "---------------------------------------------"
+
+
