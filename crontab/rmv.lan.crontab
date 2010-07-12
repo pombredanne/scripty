@@ -1,6 +1,6 @@
 # min hour dom mon dow command
 
-scripty=$HOME/scripts/scripty
+scripty=/home/rmvadm/scripts/scripty
 
 ###################### Redmine Related #######################
 # Run HgRedmine Proxy
@@ -26,5 +26,8 @@ scripty=$HOME/scripts/scripty
 30 16 * * * $scripty/backup/backup_rmv_intranet_to_lan_server.sh >/dev/null 2>&1
 
 ############### Misc #######################################
+# Lock screen on startup
+@reboot sleep 10; xdg-screensaver lock 
+
 # Shut down the system at 6:30 pm
 30 18 * * * sudo halt >/dev/null 2>&1

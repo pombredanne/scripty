@@ -1,6 +1,6 @@
 # min hour dom mon dow command
 
-scripty = $HOME/scripts/scripty
+scripty = /home/rmvadmin/scripts/scripty
 
 ###################### Drupal Related #######################
 # Run drupal cron
@@ -21,8 +21,8 @@ scripty = $HOME/scripts/scripty
 # Take mysql backup
 @hourly  $scripty/mysql/backup_mysql.sh >/dev/null 2>&1
 
-###################### Misc #######################
 
+###################### Misc #######################
 # Send Birthday greetings everyday at 5am
 0 5 * * * python $HOME/vidyalaya_apps/cron/cron_jobs.py >/dev/null 2>&1
 
