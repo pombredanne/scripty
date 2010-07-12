@@ -1,3 +1,4 @@
+Version 14 	 2010-07-12 	 Added script to mirror redmine projects on laptop 
 Version 13 	 2010-07-12 	 Added run_apps_when_online.sh 
 Version 12 	 2010-07-12 	 Added permissions 
 Version 11 	 2010-07-12 	 Imported scripts from rmv.ac.in 

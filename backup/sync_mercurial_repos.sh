@@ -5,7 +5,6 @@ scripty
 vidyalaya-apps
 vidyalaya-results
 vidyalaya-config
-vidyalaya-active-directory
 "
 
 for repo in $repos
