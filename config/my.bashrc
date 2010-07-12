@@ -36,7 +36,7 @@ alias rackspace="sshfs $MYSERVER:/home/rmvadmin/ /media/rackspace"
 alias sshrackspace="ssh $MYSERVER"
 alias fgrep="find . -name \* -print0 | xargs -0 grep -i "
 alias selenium_rc_start="java -jar /home/ramana/Scripts/selenium/selenium-server-1.0.3/selenium-server.jar"
-alias psmem="sudo python $SCRIPTY_DIR/ps_mem.py"
+alias psmem="sudo python $SCRIPTY_DIR/third_party/ps_mem.py"
 
 alias vi="/usr/bin/vim"
 
