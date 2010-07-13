@@ -24,7 +24,7 @@ rm query.sql
 
 ############ Backup ####################
 rdiff-backup /var/www/ /backup_rdiff/var_www
-rdiff-backup /home/rmvadm /backup_rdiff/home_rmvadm
+rdiff-backup --exclude **Trash /home/rmvadm /backup_rdiff/home_rmvadm
 
 ############ Delete Backups older than 30 days ####################
 ############ Will run once in a week           ####################

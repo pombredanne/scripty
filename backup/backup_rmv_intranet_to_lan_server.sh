@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-DEST=/media/lan_server
+DEST=/media/lan_server/
 
 export PASSWD=
-smbmount //192.168.2.254/f\$/intranet_backup ${DEST} -o user=mca1 password=
+smbmount //192.168.2.253/E\$/intranet_backup ${DEST} -o user=SERVERMCA/bca3 password=
 
 if [ ! -d ${DEST}/backup ]
 then
@@ -18,6 +18,6 @@ echo "`date` : Zipping"
 
 ############ Push to Server ####################
 echo "`date` : Pushing to Server"
-rsync -az /backup/rmv_lan_intranet.zip ${DEST}/backup
+rsync -az /backup/rmv_lan_intranet.zip ${DEST}/backup/
 
 smbumount ${DEST}

@@ -22,3 +22,8 @@ scripty=/home/rmvadm/scripts/scripty
 
 # Save rdiff backups to the Windows Server
 30 16 * * * run_script $scripty/backup/backup_rmv_intranet_to_lan_server.sh
+
+
+################ Misc #################################
+# Shutdown the system at 6:30 pm
+30 18 * * * sudo halt >/dev/null 2>&1

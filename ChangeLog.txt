@@ -1,3 +1,4 @@
+Version 19 	 2010-07-12 	 Cleanup of Crontab files 
 Version 18 	 2010-07-12 	 Removed logging from all scripts. If you want logging, invoke the script with run_script 
 Version 17 	 2010-07-12 	 Created run_script 
 Version 16 	 2010-07-12 	 Small cleanup to backup_mercurial_repos.sh 
