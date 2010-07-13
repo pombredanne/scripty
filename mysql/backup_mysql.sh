@@ -20,7 +20,8 @@ echo "`date` : Dumping DBs"
 echo "select schema_name from schemata where schema_name != 'information_schema'" >query.sql
 for db_name in `mysql -s -r -h ${db_src} -u ${db_user} information_schema <query.sql`
 do
-  mysqldump -h ${db_src} -u ${db_user} ${db_name} > ${db_dest}/${db_name}_${HOSTNAME}.sql
+  mysqldump --order-by-primary --skip-extended-insert \
+            -h ${db_src} -u ${db_user} ${db_name} > ${db_dest}/${db_name}_${HOSTNAME}.sql
 done
 rm query.sql
 
