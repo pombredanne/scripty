@@ -1,3 +1,7 @@
+Version 23 	 2010-07-13 	 Merge from laptop 
+Version 22 	 2010-07-12 	 Small correction to crontab files 
+Version 21 	 2010-07-12 	 Changes to backup script on lan 
+Version 20 	 2010-07-13 	 Small changes to backup scripts 
 Version 19 	 2010-07-12 	 Cleanup of Crontab files 
 Version 18 	 2010-07-12 	 Removed logging from all scripts. If you want logging, invoke the script with run_script 
 Version 17 	 2010-07-12 	 Created run_script 

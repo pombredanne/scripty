@@ -10,7 +10,7 @@ db_user=root
 
 backup_dest=${HOME}/backups/mysql_dumps
 
-offpeak_hour=3
+offpeak_hour=16
 this_hour=`date +%H`
 this_day_of_week=`date +%w`
 this_day_of_month=`date +%d`
@@ -20,7 +20,7 @@ echo "`date` : Dumping DBs"
 echo "select schema_name from schemata where schema_name != 'information_schema'" >query.sql
 for db_name in `mysql -s -r -h ${db_src} -u ${db_user} information_schema <query.sql`
 do
-  mysqldump -h ${db_src} -u ${db_user} ${db_name} > ${db_dest}/${db_name}_${db_src}.sql
+  mysqldump -h ${db_src} -u ${db_user} ${db_name} > ${db_dest}/${db_name}_${HOSTNAME}.sql
 done
 rm query.sql
 
