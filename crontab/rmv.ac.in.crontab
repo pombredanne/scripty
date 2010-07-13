@@ -23,10 +23,10 @@ scripty=/home/rmvadmin/scripts/scripty
 @hourly run_script $scripty/mysql/backup_mysql.sh
 
 # Sync Repos in Bitbucket to GoogleCode and SF
-@daily run_script $scripty/backup/backup_mercurial_repos.sh
+@daily run_script $scripty/mercurial/backup_mercurial_repos.sh
 
 # Refresh local repos
-@daily run_script $scripty/backup/sync_mercurial_repos.sh
+@daily run_script $scripty/mercurial/sync_mercurial_repos.sh
 
 
 

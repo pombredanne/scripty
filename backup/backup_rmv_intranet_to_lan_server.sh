@@ -14,7 +14,7 @@ fi
 ############ Zip and Encrypt ####################
 echo "`date` : Zipping"
 # zip -r --quiet --encrypt --password ${PASSPHRASE} /backup/rmv_lan_intranet.zip /backup_rdiff
-7za u -p${PASSPHRASE} -tzip /backup/rmv_lan_intranet.zip /backup_rdiff
+7za u -p${PASSPHRASE} -tzip /backup/rmv_lan_intranet.zip /backup_rdiff >/dev/null
 
 ############ Push to Server ####################
 echo "`date` : Pushing to Server"
