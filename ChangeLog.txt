@@ -1,3 +1,4 @@
+Version 29 	 2010-07-13 	 Moving mercurial related scripts to their own dir 
 Version 28 	 2010-07-13 	 Another typo in crontab. 
 Version 27 	 2010-07-13 	 Backup mysql hourly 
 Version 26 	 2010-07-13 	 Automated merge with file:///home/ramana/scripts/scripty 

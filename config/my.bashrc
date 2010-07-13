@@ -25,9 +25,11 @@ alias mount_mca="smbmount //192.168.1.250/f\$ /media/mca_server -o user=mca1"
 
 export TEMP="/tmp"
 
-export SCRIPTS_DIR="~/scripts"
-export SCRIPTY_DIR="~/scripts/scripty"
-export PATH=$PATH:$SCRIPTS_DIR:$SCRIPTY_DIR
+export SCRIPTS_DIR="$HOME/scripts"
+export SCRIPTY_DIR="$HOME/scripts/scripty"
+export PATH=$PATH:$SCRIPTS_DIR
+# Add everything under scripty to path
+export PATH="${PATH}$(find $SCRIPTY_DIR -name '.*' -prune -o -type d -printf ':%p')"
 
 export MYSERVER="rmvadmin@173.203.194.68"
 
