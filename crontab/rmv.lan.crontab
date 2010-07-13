@@ -17,6 +17,9 @@ scripty=/home/rmvadm/scripts/scripty
 0 17 * * mon,thu run_script $scripty/redmine/mirror_redmine_on_rackspace.sh
 
 ################ Backups #################################
+# Take mysql backup
+@hourly run_script $scripty/mysql/backup_mysql.sh
+
 # Backup using rdiff-backup (un-encrypted)
 @hourly run_script $scripty/backup/backup_rmv_intranet_using_rdiff.sh
 
