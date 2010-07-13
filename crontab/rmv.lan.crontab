@@ -1,8 +1,6 @@
 # min hour dom mon dow command
 
-# min hour dom mon dow command
-
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/homr/rmvadm/scripts/scripty
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/home/rmvadm/scripts/scripty
 scripty=/home/rmvadm/scripts/scripty
 
 ###################### Redmine Related #######################
