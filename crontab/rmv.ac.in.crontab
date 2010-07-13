@@ -1,6 +1,6 @@
 # min hour dom mon dow command
 
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/homr/rmvadmin/scripts/scripty
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/home/rmvadmin/scripts/scripty
 scripty=/home/rmvadmin/scripts/scripty
 
 ###################### Drupal Related #######################
