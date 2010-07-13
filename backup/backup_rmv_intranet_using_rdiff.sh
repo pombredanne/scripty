@@ -3,8 +3,6 @@
 #Enable/Disable Debugging
 # set -x
 
-LOG="/var/log/`basename $0`.log"
-
 db_dest=${HOME}/mysql_dumps
 db_src=localhost
 db_user=root
@@ -15,10 +13,8 @@ this_hour=`date +%H`
 this_day_of_week=`date +%w`
 this_day_of_month=`date +%d`
 
-echo "`date` : Script Started" >> ${LOG}
-
 ####### Take MySQL Backup #################
-echo "`date` : Dumping DBs" >> ${LOG}
+echo "`date` : Dumping DBs"
 echo "select schema_name from schemata where schema_name != 'information_schema'" >query.sql
 for db_name in `mysql -s -r -h ${db_src} -u ${db_user} information_schema <query.sql`
 do
@@ -28,18 +24,14 @@ rm query.sql
 
 ############ Backup ####################
 rdiff-backup /var/www/ /backup_rdiff/var_www
-rdiff-backup --exclude **Trash /home/rmvadm /backup_rdiff/home_rmvadm 
+rdiff-backup --exclude **Trash /home/rmvadm /backup_rdiff/home_rmvadm
 
 ############ Delete Backups older than 30 days ####################
 ############ Will run once in a week           ####################
 
 if [ ${this_hour} -eq ${offpeak_hour} ] && [ ${this_day_of_week} -eq 1 ]
 then
-  echo "`date` : Deleting Old Backups" >> ${LOG}
+  echo "`date` : Deleting Old Backups"
   rdiff-backup --remove-older-than 30D --force /backup_rdiff/var_www
   rdiff-backup --remove-older-than 30D --force /backup_rdiff/home_rmvadm
 fi
-
-
-echo "`date` : Script Finished" >> ${LOG}
-echo "-----------------------------------------------------------------" >> ${LOG}

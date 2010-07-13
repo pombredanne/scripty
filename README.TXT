@@ -18,7 +18,7 @@ Guidelines for Developers
     # $Source$
 
 * For Bash scripts, get the log file name as
-    LOG="`dirname $0`/logs/$0.log"
+    LOG="/var/log/`basename $0`.log"
 
 * To redirect all stdout and stderr to LOG
     exec >> $LOG 2>&1
