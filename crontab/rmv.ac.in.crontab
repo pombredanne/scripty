@@ -17,6 +17,8 @@ scripty=/home/rmvadmin/scripts/scripty
 #Freeup memeory used by ruby process (redmine)
 @hourly sudo service redmine restart >/dev/null 2>&1
 
+# Delete and re-create cache for redmine pages
+0 1 * * sun run_script $scripty/redmine/refresh_redmine_cache.sh
 
 ###################### Backups #######################
 # Take mysql backup

@@ -1,3 +1,4 @@
+Version 32 	 2010-07-13 	 Making mysqldump VCS friendly 
 Version 31 	 2010-07-13 	 Cleanup of my.bashrc 
 Version 30 	 2010-07-13 	 Adding everything under scripty dir to PATH 
 Version 29 	 2010-07-13 	 Moving mercurial related scripts to their own dir 
