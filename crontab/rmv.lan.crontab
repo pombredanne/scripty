@@ -26,6 +26,8 @@ scripty=/home/rmvadm/scripts/scripty
 # Save rdiff backups to the Windows Server
 30 16 * * * run_script $scripty/backup/backup_rmv_intranet_to_lan_server.sh
 
+# Fetch vidyalaya_active_directory from LAN server to Intranet server
+0 18 * * * run_script $scripty/backup/fetch_vidyalaya_active_directory_repo.sh
 
 ################ Misc #################################
 # Shut down the system at 6:30 pm

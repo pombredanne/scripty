@@ -26,6 +26,7 @@ export TEMP="/tmp"
 
 export SCRIPTS_DIR="$HOME/scripts"
 export SCRIPTY_DIR="$HOME/scripts/scripty"
+export scripty="$HOME/scripts/scripty"
 export PATH=$PATH:$SCRIPTS_DIR
 # Add everything under scripty to path
 export PATH="${PATH}$(find $SCRIPTY_DIR -name '.*' -prune -o -type d -printf ':%p')"
