@@ -33,6 +33,8 @@ export PATH="${PATH}$(find $SCRIPTY_DIR -name '.*' -prune -o -type d -printf ':%
 alias cds="cd $SCRIPTS_DIR"
 alias cdss="cd $SCRIPTY_DIR"
 
+alias hgsync="hg push; hg fetch"
+
 ########## Useful for server
 alias arestart="sudo service apache2 restart"
 alias lrestart="sudo service lighttpd restart"
