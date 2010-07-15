@@ -6,26 +6,21 @@ source_dirs="
 /var/www/hg/
 /var/www/project_docs/
 "
+
 sudo network-config -ta Internet
 
-# Update repos
-hg -R /var/www/hg/apps fetch
-hg -R /var/www/hg/results fetch
-
-# Refresh commit info
-ruby /var/www/redmine/script/runner "Repository.fetch_changesets" -e production >/dev/null 2>&1
-
-
 >/var/www/redmine/log/production.log
-mysqldump -uroot redmine > /tmp/redmine.sql
+
+hg commit -A -m "Auto-commit for batch job" -R /var/www/redmine
+hg push -R /var/www/redmine
 
 for f in ${source_dirs}
 do
     echo "`date` : Syncing ${f} "
-    rsync -az --delete --progress ${f} ${MYSERVER}:${f}
+    rsync -az --delete ${f} ${MYSERVER}:${f}
 done
 
 echo "`date` : Running update on remote machine"
-ssh ${MYSERVER} $HOME/scripts/scripty/redmine/update_redmine_on_server.sh
+ssh ${MYSERVER} \$HOME/scripts/scripty/redmine/update_redmine_on_server.sh
 
 sudo network-config -ta LAN
