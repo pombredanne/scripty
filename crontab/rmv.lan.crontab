@@ -29,6 +29,9 @@ scripty=/home/rmvadm/scripts/scripty
 # Fetch vidyalaya_active_directory from LAN server to Intranet server
 0 18 * * * run_script $scripty/backup/fetch_vidyalaya_active_directory_repo.sh
 
+# Sync Mercurial repos
+0 10 * * * sudo network-config -ta Internet; host google.com && run_script $scripty/mercurial/sync_mercurial_repos.sh; sudo network-config -ta LAN >/dev/null 2>&1
+
 ################ Misc #################################
 # Shut down the system at 6:30 pm
 30 18 * * * sudo halt >/dev/null 2>&1
