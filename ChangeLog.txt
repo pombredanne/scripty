@@ -1,3 +1,7 @@
+Version 37 	 2010-07-15 	 Added hgsync alias 
+Version 36 	 2010-07-15 	 Adding vidyalaya-active-directory back to the list of repos 
+Version 35 	 2010-07-15 	 http_proxy for lan 
+Version 34 	 2010-07-14 	 Typo in rmv.ac.in crontab 
 Version 33 	 2010-07-14 	 Added refresh_redmine_cache.sh to crontab 
 Version 32 	 2010-07-13 	 Making mysqldump VCS friendly 
 Version 31 	 2010-07-13 	 Cleanup of my.bashrc 
