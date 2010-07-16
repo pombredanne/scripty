@@ -1,6 +1,7 @@
 # min hour dom mon dow command
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/home/rmvadmin/scripts/scripty
+BASH_ENV=/home/rmvadmin/.my.bashrc
 scripty=/home/rmvadmin/scripts/scripty
 
 ###################### Drupal Related #######################
