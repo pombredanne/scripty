@@ -16,7 +16,7 @@ mysqldump -uroot --no-data --skip-dump-date drupal > ${drupal_root}/dumps/drupal
 hg commit -A -m 'Auto commit from nightly batch job' -R ${drupal_root}
 
 echo "`date` : Pushing to Bitbucket"
-hg push ssh://hg@bitbucket.org/dkmurthy/vidyalaya-drupal/ -R ${drupal_root}
+hg push ssh://hg@bitbucket.org/dkmurthy/my-private-repo/ -R ${drupal_root}
 
 
 # Version = $Revision$
