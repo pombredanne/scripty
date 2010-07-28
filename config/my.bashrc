@@ -44,9 +44,6 @@ alias rrestart="sudo service redmine restart"
 
 alias psmem="sudo python $SCRIPTY_DIR/third_party/ps_mem.py"
 
-########## Useful in intranet
-export http_proxy=
-
 ########## Useful only in my laptop
 alias wiki="wine /media/OS/wikitaxi/WikiTaxi.exe /media/OS/wikitaxi/enwiki-20100312-pages-articles.taxi Venkata"
 alias mediacoder="wine /media/OS/Program\ Files/MediaCoder/mediacoder.exe"

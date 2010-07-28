@@ -1,3 +1,13 @@
+Version 47 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Version 46 	 2010-07-16 	 Change to push_drupal_to_bitbucket.sh 
+Version 45 	 2010-07-16 	 Automated merge with ssh://hg@bitbucket.org/dkmurthy/scripty 
+Version 44 	 2010-07-16 	 Small cleanup to mercurial/sync_mercurial_repos.sh 
+Version 43 	 2010-07-16 	 Adding BASH_ENV variable to crontab 
+Version 42 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Version 41 	 2010-07-15 	 Added crontab entry to sync mercurial repos in LAN 
+Version 40 	 2010-07-15 	 Added fetch_vidyalaya_active_directory_repo.sh 
+Version 39 	 2010-07-15 	 Cleanup of update_redmine_on_server.sh script 
+Version 38 	 2010-07-15 	 Cleanup of run_apps_when_online.sh 
 Version 37 	 2010-07-15 	 Added hgsync alias 
 Version 36 	 2010-07-15 	 Adding vidyalaya-active-directory back to the list of repos 
 Version 35 	 2010-07-15 	 http_proxy for lan 
