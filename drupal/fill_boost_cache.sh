@@ -9,7 +9,7 @@ count=0
 
 while [ $count -lt 50 ]
 do
-  httrack --quiet -p0 --sockets=1 --connection-per-second=0.5  -F "Mozilla" http://rmv.ac.in -*/events_calendar/* -*/just-ask/* -*feed* -*=*
+  /usr/bin/httrack --quiet -p0 --sockets=1 --connection-per-second=0.5  -F "Mozilla" http://rmv.ac.in -*/events_calendar/* -*/just-ask/* -*feed* -*=*
 
   #wget -w 2 -r --spider --force-html -R "*/events_calendar/*, */just-ask/*, *feed*, *=*" http://rmv.ac.in
 
