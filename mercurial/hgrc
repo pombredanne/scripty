@@ -3,7 +3,6 @@ username = Dakshina Murthy <dkmurthy9@gmail.com>
 ignore = ~/.hgignore
 ssh = ssh -C
 
-
 [web]
 allow_archive = bz2 gz zip
 style = gitweb
