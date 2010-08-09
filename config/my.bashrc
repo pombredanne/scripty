@@ -58,6 +58,10 @@ alias rackspace="sshfs $MYSERVER:/home/rmvadmin/ /media/rackspace"
 alias sshrackspace="ssh $MYSERVER"
 
 
+########## General
+export WORKON_HOME=$HOME/virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
 if [ -f ~/.my.secret.bashrc ]; then
     . ~/.my.secret.bashrc
 fi
