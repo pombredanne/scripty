@@ -6,6 +6,7 @@ vidyalaya-apps
 vidyalaya-results
 vidyalaya-config
 vidyalaya-active-directory
+pysis
 "
 
 REPOS_BACKUP_DIR=/tmp
