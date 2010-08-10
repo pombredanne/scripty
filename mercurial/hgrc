@@ -1,3 +1,6 @@
+[defaults]
+addremove = --similarity 75
+
 [ui]
 username = Dakshina Murthy <dkmurthy9@gmail.com>
 ignore = ~/.hgignore

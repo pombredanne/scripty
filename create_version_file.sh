@@ -20,7 +20,7 @@ fi
 version_id=`hg -q id -n | tr -d +`
 let version_id++
 
-echo version = "'$version_id'" > ${PROJECT_ROOT}/VERSION
-echo last_modified_timestamp = "'`date +"%F %T %Z"`'" >> ${PROJECT_ROOT}/VERSION
+echo version = "'$version_id'" > ${PROJECT_ROOT}/version.py
+echo last_modified_timestamp = "'`date +"%F %T %Z"`'" >> ${PROJECT_ROOT}/version.py
 
 hg log --template 'Version {rev} \t {date|shortdate} \t {desc|firstline} \n' > ${PROJECT_ROOT}/CHANGELOG
