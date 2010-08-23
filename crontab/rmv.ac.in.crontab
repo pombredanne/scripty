@@ -35,4 +35,4 @@ scripty=/home/rmvadmin/scripts/scripty
 
 ###################### Misc #######################
 # Send Birthday greetings everyday at 5am
-0 5 * * * python $HOME/vidyalaya_apps/cron/cron_jobs.py >/dev/null 2>&1
+0 5 * * * source $HOME/virtualenvs/pysis/bin/activate && python /var/www/pysis/manage.py runjobs daily >/dev/null 2>&1
