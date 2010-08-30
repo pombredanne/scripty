@@ -23,10 +23,14 @@ do
 
   hg fetch -R $REPO_DIR http://bitbucket.org/dkmurthy/$REPO
 
+  # Google Code
   hg push -R $REPO_DIR https://${GOOGLECODE_USERNAME}:${GOOGLECODE_PASSWD}@${REPO}.googlecode.com/hg/
 
   # Sourceforge allows only 15 chars in project url
   REPO1=${REPO:0:15}
   hg push -R $REPO_DIR ssh://dkmurthy@${REPO1}.hg.sourceforge.net/hgroot/${REPO1}/${REPO1}
+
+  #GitHub
+  hg push -R $REPO_DIR git+ssh://git@github.com/dkmurthy/$REPO
 
 done

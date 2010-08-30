@@ -16,6 +16,8 @@ hgext.keyword=
 hgext.convert=
 hgext.mq = 
 hgk = 
+hgext.bookmarks =
+hggit =
 
 [keyword]
 ** =
