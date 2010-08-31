@@ -31,6 +31,6 @@ do
   hg push -R $REPO_DIR ssh://dkmurthy@${REPO1}.hg.sourceforge.net/hgroot/${REPO1}/${REPO1}
 
   #GitHub
-  hg push -R $REPO_DIR git+ssh://git@github.com/dkmurthy/$REPO
+  hg push -R $REPO_DIR git+ssh://git@github.com/Vidyalaya/$REPO
 
 done
