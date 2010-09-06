@@ -1,3 +1,5 @@
+Version 57 	 2010-08-31 	 Changing github url 
+Version 56 	 2010-08-30 	 Backup hg repos to github.com using hg-git 
 Version 55 	 2010-08-23 	 Changing Greetings app 
 Version 54 	 2010-08-10 	 Changing VERSION to version.py to make imports easier 
 Version 53 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
