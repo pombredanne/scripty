@@ -10,7 +10,7 @@ do
     else
         echo Not processing $source
     fi
-done < dropbox_list.txt
+done < ${HOME}/scripts/scripty/backup/dropbox_list.txt
 
 sudo su -l dropbox -s /bin/bash -c "python /etc/dropbox/bin/dropbox.py start"
 
