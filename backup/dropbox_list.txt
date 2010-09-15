@@ -1,0 +1,4 @@
+/home/rmvadmin/mysql_dumps
+/home/rmvadmin/scripts
+/var/www
+
