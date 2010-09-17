@@ -32,7 +32,7 @@ scripty=/home/rmvadmin/scripts/scripty
 @daily run_script $scripty/mercurial/sync_mercurial_repos.sh
 
 # Upload backups to Dropbox
-0 3 * * * run_script $scripty/backup/upload_to_dropbox.sh
+20 3 * * * run_script $scripty/backup/upload_to_dropbox.sh
 
 ###################### Misc #######################
 # Send Birthday greetings everyday at 5am
