@@ -31,6 +31,7 @@ backup_to_sourceforge()
 
     # example : repo_base=/home/scm_git/v/vi/vidyalaya
     repo_base=/home/scm_git/${sf_projectname:0:1}/${sf_projectname:0:2}/${sf_projectname}
+    frs_base=/home/frs/project/${sf_projectname:0:1}/${sf_projectname:0:2}/${sf_projectname}
     repo=${repo_base}/${repo_name}
 
     ssh ${sf_username},${sf_projectname}@shell.sourceforge.net << _EOF_2
@@ -44,6 +45,8 @@ backup_to_sourceforge()
             cd $repo
             git --work-tree=. pull http://github.com/${github_username}/${repo_name}.git
         fi
+
+        zip -q -r ${frs_base}/git/${repo_name}.zip ${repo}
 _EOF_2
 }
 

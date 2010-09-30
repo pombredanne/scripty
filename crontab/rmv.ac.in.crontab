@@ -34,6 +34,10 @@ scripty=/home/rmvadmin/scripts/scripty
 # Upload backups to Dropbox
 20 3 * * * run_script $scripty/backup/upload_to_dropbox.sh
 
+# Backup Github and Bitbucket to Sourceforge
+10 2 * * * run_script $scripty/backup/backup_github_repos_to_sourceforge.sh
+20 2 * * * run_script $scripty/backup/backup_bitbucket_repos_to_sourceforge.sh
+
 ###################### Misc #######################
 # Send Birthday greetings everyday at 5am
 0 5 * * * $HOME/virtualenvs/pysis/bin/python /var/www/pysis/manage.py runjobs daily </dev/null 2>&1

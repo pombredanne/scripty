@@ -29,6 +29,7 @@ backup_to_sourceforge()
 
     # example : repo_base=/home/scm_hg/v/vi/vidyalaya
     repo_base=/home/scm_hg/${sf_projectname:0:1}/${sf_projectname:0:2}/${sf_projectname}
+    frs_base=/home/frs/project/${sf_projectname:0:1}/${sf_projectname:0:2}/${sf_projectname}
     repo=${repo_base}/${repo_name}
 
     ssh ${sf_username},${sf_projectname}@shell.sourceforge.net << _EOF_2
@@ -41,6 +42,8 @@ backup_to_sourceforge()
             cd $repo
             hg clone http://bitbucket.org/${bitbucket_username}/${repo_name} .
         fi
+
+        zip -q -r ${frs_base}/mercurial/${repo_name}.zip ${repo}
 _EOF_2
 }
 
