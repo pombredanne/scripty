@@ -1,3 +1,8 @@
+Version 63 	 2010-09-17 	 Chaning time of dropbox cron to let the mysql backup finish 
+Version 62 	 2010-09-15 	 Fixing path issue in drpbox backup script 
+Version 61 	 2010-09-15 	 Added script to backup to dropbox 
+Version 60 	 2010-09-09 	 Fixing Birthday reminedrs issue 
+Version 59 	 2010-09-07 	 Adding refresh planet to crontab 
 Version 58 	 2010-09-06 	 Adding blogs-planet to repos 
 Version 57 	 2010-08-31 	 Changing github url 
 Version 56 	 2010-08-30 	 Backup hg repos to github.com using hg-git 
