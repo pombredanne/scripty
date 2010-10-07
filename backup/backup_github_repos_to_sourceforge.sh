@@ -26,27 +26,28 @@ _EOF_1
 
 backup_to_sourceforge()
 {
-    repo_name=$1
-    echo Processing $repo_name
+    git_repo_name=$1
+    hg_repo_name=${git_repo_name}_github
+    tmp_repo=/tmp/${git_repo_name}
 
-    # example : repo_base=/home/scm_git/v/vi/vidyalaya
-    repo_base=/home/scm_git/${sf_projectname:0:1}/${sf_projectname:0:2}/${sf_projectname}
+    echo Processing $git_repo_name
+
+    # example : repo_base=/home/scm_hg/v/vi/vidyalaya
+    repo_base=/home/scm_hg/${sf_projectname:0:1}/${sf_projectname:0:2}/${sf_projectname}
     frs_base=/home/frs/project/${sf_projectname:0:1}/${sf_projectname:0:2}/${sf_projectname}
-    repo=${repo_base}/${repo_name}
 
     ssh ${sf_username},${sf_projectname}@shell.sourceforge.net << _EOF_2
-        if [ -d  $repo ]
-        then
-            cd $repo
-            git --work-tree=. pull http://github.com/${github_username}/${repo_name}.git
-        else
-            mkdir -p $repo
-            git --git-dir=$repo init --shared=all --bare
-            cd $repo
-            git --work-tree=. pull http://github.com/${github_username}/${repo_name}.git
-        fi
 
-        zip -q -r ${frs_base}/git/${repo_name}.zip ${repo}
+        cd ${repo_base}
+        git clone http://github.com/${github_username}/${git_repo_name}.git ${tmp_repo}
+
+        hg convert ${tmp_repo} ${hg_repo_name}
+        hg update -R ${hg_repo_name}
+
+        rm -rf ${tmp_repo}
+
+        zip -q -r ${frs_base}/${hg_repo_name}.zip ${hg_repo_name}
+
 _EOF_2
 }
 

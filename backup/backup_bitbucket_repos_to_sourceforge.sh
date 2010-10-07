@@ -35,15 +35,12 @@ backup_to_sourceforge()
     ssh ${sf_username},${sf_projectname}@shell.sourceforge.net << _EOF_2
         if [ -d  $repo ]
         then
-            cd $repo
-            hg fetch http://bitbucket.org/${bitbucket_username}/${repo_name}
+            hg fetch http://bitbucket.org/${bitbucket_username}/${repo_name} -R $repo
         else
-            mkdir -p $repo
-            cd $repo
-            hg clone http://bitbucket.org/${bitbucket_username}/${repo_name} .
+            hg clone http://bitbucket.org/${bitbucket_username}/${repo_name} $repo
         fi
 
-        zip -q -r ${frs_base}/mercurial/${repo_name}.zip ${repo}
+        zip -q -r ${frs_base}/${repo_name}.zip ${repo}
 _EOF_2
 }
 
