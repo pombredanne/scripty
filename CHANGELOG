@@ -1,67 +1,68 @@
-Version 66 	 2010-10-07 	 Cleanup to sourceforge scripts 
-Version 65 	 2010-09-30 	 Adding github and bitbucket backup to cron 
-Version 64 	 2010-09-30 	 Backup github and bitbucket to sourceforge 
-Version 63 	 2010-09-17 	 Chaning time of dropbox cron to let the mysql backup finish 
-Version 62 	 2010-09-15 	 Fixing path issue in drpbox backup script 
-Version 61 	 2010-09-15 	 Added script to backup to dropbox 
-Version 60 	 2010-09-09 	 Fixing Birthday reminedrs issue 
-Version 59 	 2010-09-07 	 Adding refresh planet to crontab 
-Version 58 	 2010-09-06 	 Adding blogs-planet to repos 
-Version 57 	 2010-08-31 	 Changing github url 
-Version 56 	 2010-08-30 	 Backup hg repos to github.com using hg-git 
-Version 55 	 2010-08-23 	 Changing Greetings app 
-Version 54 	 2010-08-10 	 Changing VERSION to version.py to make imports easier 
-Version 53 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Version 52 	 2010-08-09 	 added pysis to backups 
-Version 51 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Version 50 	 2010-07-30 	 Fixing issue with fill_boost_cache.sh 
-Version 49 	 2010-08-09 	 Small Changes 
-Version 48 	 2010-07-28 	 Delete http_proxy 
-Version 47 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Version 46 	 2010-07-16 	 Change to push_drupal_to_bitbucket.sh 
-Version 45 	 2010-07-16 	 Automated merge with ssh://hg@bitbucket.org/dkmurthy/scripty 
-Version 44 	 2010-07-16 	 Small cleanup to mercurial/sync_mercurial_repos.sh 
-Version 43 	 2010-07-16 	 Adding BASH_ENV variable to crontab 
-Version 42 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Version 41 	 2010-07-15 	 Added crontab entry to sync mercurial repos in LAN 
-Version 40 	 2010-07-15 	 Added fetch_vidyalaya_active_directory_repo.sh 
-Version 39 	 2010-07-15 	 Cleanup of update_redmine_on_server.sh script 
-Version 38 	 2010-07-15 	 Cleanup of run_apps_when_online.sh 
-Version 37 	 2010-07-15 	 Added hgsync alias 
-Version 36 	 2010-07-15 	 Adding vidyalaya-active-directory back to the list of repos 
-Version 35 	 2010-07-15 	 http_proxy for lan 
-Version 34 	 2010-07-14 	 Typo in rmv.ac.in crontab 
-Version 33 	 2010-07-14 	 Added refresh_redmine_cache.sh to crontab 
-Version 32 	 2010-07-13 	 Making mysqldump VCS friendly 
-Version 31 	 2010-07-13 	 Cleanup of my.bashrc 
-Version 30 	 2010-07-13 	 Adding everything under scripty dir to PATH 
-Version 29 	 2010-07-13 	 Moving mercurial related scripts to their own dir 
-Version 28 	 2010-07-13 	 Another typo in crontab. 
-Version 27 	 2010-07-13 	 Backup mysql hourly 
-Version 26 	 2010-07-13 	 Automated merge with file:///home/ramana/scripts/scripty 
-Version 25 	 2010-07-13 	 Spelling mistake in crontab 
-Version 24 	 2010-07-13 	 Minor cleanup of backup script 
-Version 23 	 2010-07-13 	 Merge from laptop 
-Version 22 	 2010-07-12 	 Small correction to crontab files 
-Version 21 	 2010-07-12 	 Changes to backup script on lan 
-Version 20 	 2010-07-13 	 Small changes to backup scripts 
-Version 19 	 2010-07-12 	 Cleanup of Crontab files 
-Version 18 	 2010-07-12 	 Removed logging from all scripts. If you want logging, invoke the script with run_script 
-Version 17 	 2010-07-12 	 Created run_script 
-Version 16 	 2010-07-12 	 Small cleanup to backup_mercurial_repos.sh 
-Version 15 	 2010-07-12 	 Removing vidyalaya_active_directory as it is merged with vidyalaya_config 
-Version 14 	 2010-07-12 	 Added script to mirror redmine projects on laptop 
-Version 13 	 2010-07-12 	 Added run_apps_when_online.sh 
-Version 12 	 2010-07-12 	 Added permissions 
-Version 11 	 2010-07-12 	 Imported scripts from rmv.ac.in 
-Version 10 	 2010-07-12 	 Lot of new scripts imported 
-Version 9 	 2010-07-12 	 Added some more config files 
-Version 8 	 2010-07-11 	 redmine cache - omit 404 links from re-caching 
-Version 7 	 2010-07-10 	 Script to refresh redmine cache 
-Version 6 	 2010-07-04 	 Delete Cookies in create_osum_profile.py 
-Version 5 	 2010-06-23 	 Script to create OSUM profile 
-Version 4 	 2010-06-23 	 Added ps_mem 
-Version 3 	 2010-05-06 	 New: Automatically creating ChangeLog.txt 
-Version 2 	 2010-05-06 	 Create version.py file 
-Version 1 	 2010-05-05 	 Added mdb2sqlite 
-Version 0 	 2010-04-09 	 Initial Commit 
+Revision 67 	 2010-10-16 	 Changing logic in create_revision_file.sh 
+Revision 66 	 2010-10-07 	 Cleanup to sourceforge scripts 
+Revision 65 	 2010-09-30 	 Adding github and bitbucket backup to cron 
+Revision 64 	 2010-09-30 	 Backup github and bitbucket to sourceforge 
+Revision 63 	 2010-09-17 	 Chaning time of dropbox cron to let the mysql backup finish 
+Revision 62 	 2010-09-15 	 Fixing path issue in drpbox backup script 
+Revision 61 	 2010-09-15 	 Added script to backup to dropbox 
+Revision 60 	 2010-09-09 	 Fixing Birthday reminedrs issue 
+Revision 59 	 2010-09-07 	 Adding refresh planet to crontab 
+Revision 58 	 2010-09-06 	 Adding blogs-planet to repos 
+Revision 57 	 2010-08-31 	 Changing github url 
+Revision 56 	 2010-08-30 	 Backup hg repos to github.com using hg-git 
+Revision 55 	 2010-08-23 	 Changing Greetings app 
+Revision 54 	 2010-08-10 	 Changing VERSION to version.py to make imports easier 
+Revision 53 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Revision 52 	 2010-08-09 	 added pysis to backups 
+Revision 51 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Revision 50 	 2010-07-30 	 Fixing issue with fill_boost_cache.sh 
+Revision 49 	 2010-08-09 	 Small Changes 
+Revision 48 	 2010-07-28 	 Delete http_proxy 
+Revision 47 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Revision 46 	 2010-07-16 	 Change to push_drupal_to_bitbucket.sh 
+Revision 45 	 2010-07-16 	 Automated merge with ssh://hg@bitbucket.org/dkmurthy/scripty 
+Revision 44 	 2010-07-16 	 Small cleanup to mercurial/sync_mercurial_repos.sh 
+Revision 43 	 2010-07-16 	 Adding BASH_ENV variable to crontab 
+Revision 42 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Revision 41 	 2010-07-15 	 Added crontab entry to sync mercurial repos in LAN 
+Revision 40 	 2010-07-15 	 Added fetch_vidyalaya_active_directory_repo.sh 
+Revision 39 	 2010-07-15 	 Cleanup of update_redmine_on_server.sh script 
+Revision 38 	 2010-07-15 	 Cleanup of run_apps_when_online.sh 
+Revision 37 	 2010-07-15 	 Added hgsync alias 
+Revision 36 	 2010-07-15 	 Adding vidyalaya-active-directory back to the list of repos 
+Revision 35 	 2010-07-15 	 http_proxy for lan 
+Revision 34 	 2010-07-14 	 Typo in rmv.ac.in crontab 
+Revision 33 	 2010-07-14 	 Added refresh_redmine_cache.sh to crontab 
+Revision 32 	 2010-07-13 	 Making mysqldump VCS friendly 
+Revision 31 	 2010-07-13 	 Cleanup of my.bashrc 
+Revision 30 	 2010-07-13 	 Adding everything under scripty dir to PATH 
+Revision 29 	 2010-07-13 	 Moving mercurial related scripts to their own dir 
+Revision 28 	 2010-07-13 	 Another typo in crontab. 
+Revision 27 	 2010-07-13 	 Backup mysql hourly 
+Revision 26 	 2010-07-13 	 Automated merge with file:///home/ramana/scripts/scripty 
+Revision 25 	 2010-07-13 	 Spelling mistake in crontab 
+Revision 24 	 2010-07-13 	 Minor cleanup of backup script 
+Revision 23 	 2010-07-13 	 Merge from laptop 
+Revision 22 	 2010-07-12 	 Small correction to crontab files 
+Revision 21 	 2010-07-12 	 Changes to backup script on lan 
+Revision 20 	 2010-07-13 	 Small changes to backup scripts 
+Revision 19 	 2010-07-12 	 Cleanup of Crontab files 
+Revision 18 	 2010-07-12 	 Removed logging from all scripts. If you want logging, invoke the script with run_script 
+Revision 17 	 2010-07-12 	 Created run_script 
+Revision 16 	 2010-07-12 	 Small cleanup to backup_mercurial_repos.sh 
+Revision 15 	 2010-07-12 	 Removing vidyalaya_active_directory as it is merged with vidyalaya_config 
+Revision 14 	 2010-07-12 	 Added script to mirror redmine projects on laptop 
+Revision 13 	 2010-07-12 	 Added run_apps_when_online.sh 
+Revision 12 	 2010-07-12 	 Added permissions 
+Revision 11 	 2010-07-12 	 Imported scripts from rmv.ac.in 
+Revision 10 	 2010-07-12 	 Lot of new scripts imported 
+Revision 9 	 2010-07-12 	 Added some more config files 
+Revision 8 	 2010-07-11 	 redmine cache - omit 404 links from re-caching 
+Revision 7 	 2010-07-10 	 Script to refresh redmine cache 
+Revision 6 	 2010-07-04 	 Delete Cookies in create_osum_profile.py 
+Revision 5 	 2010-06-23 	 Script to create OSUM profile 
+Revision 4 	 2010-06-23 	 Added ps_mem 
+Revision 3 	 2010-05-06 	 New: Automatically creating ChangeLog.txt 
+Revision 2 	 2010-05-06 	 Create version.py file 
+Revision 1 	 2010-05-05 	 Added mdb2sqlite 
+Revision 0 	 2010-04-09 	 Initial Commit 

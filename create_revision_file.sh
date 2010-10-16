@@ -33,4 +33,4 @@ fi
 echo "revision = '$revision_number'
 last_modified_timestamp = '$last_modified_timestamp' " >> ${REVISION_FILE}
 
-hg log --template 'Version {rev} \t {date|shortdate} \t {desc|firstline} \n' > ${PROJECT_ROOT}/CHANGELOG
+hg log --template 'Revision {rev} \t {date|shortdate} \t {desc|firstline} \n' > ${PROJECT_ROOT}/CHANGELOG
