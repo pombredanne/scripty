@@ -1,3 +1,4 @@
+Version 66 	 2010-10-07 	 Cleanup to sourceforge scripts 
 Version 65 	 2010-09-30 	 Adding github and bitbucket backup to cron 
 Version 64 	 2010-09-30 	 Backup github and bitbucket to sourceforge 
 Version 63 	 2010-09-17 	 Chaning time of dropbox cron to let the mysql backup finish 
