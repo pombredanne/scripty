@@ -38,6 +38,10 @@ scripty=/home/rmvadmin/scripts/scripty
 10 2 * * * run_script $scripty/backup/backup_github_repos_to_sourceforge.sh
 20 2 * * * run_script $scripty/backup/backup_bitbucket_repos_to_sourceforge.sh
 
+# Backup Bitbucket to GitHub
+40 2 * * * run_script $scripty/backup/bitbucket2github.sh
+
+
 ###################### Misc #######################
 # Send Birthday greetings everyday at 5am
 0 5 * * * $HOME/virtualenvs/pysis/bin/python /var/www/pysis/manage.py runjobs daily </dev/null 2>&1
