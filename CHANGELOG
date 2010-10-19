@@ -1,3 +1,4 @@
+Revision 70 	 2010-10-18 	 Adding bitbucket2github.sh to crontab 
 Revision 69 	 2010-10-18 	 Adding bitbucket2github.sh 
 Revision 68 	 2010-10-16 	 Small change to create_revision_file.sh 
 Revision 67 	 2010-10-16 	 Changing logic in create_revision_file.sh 
