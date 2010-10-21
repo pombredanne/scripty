@@ -59,9 +59,10 @@ alias sshrackspace="ssh $MYSERVER"
 
 
 ########## General
-export WORKON_HOME=$HOME/virtualenvs
-export PIP_DOWNLOAD_CACHE=$HOME/virtualenvs/download_cache
+export WORKON_HOME=/virtualenvs
+export PIP_DOWNLOAD_CACHE=/virtualenvs/download_cache
 source /usr/local/bin/virtualenvwrapper.sh
+source ~/.django_bash_completion
 
 if [ -f ~/.my.secret.bashrc ]; then
     . ~/.my.secret.bashrc
