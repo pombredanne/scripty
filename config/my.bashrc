@@ -60,6 +60,7 @@ alias sshrackspace="ssh $MYSERVER"
 
 ########## General
 export WORKON_HOME=$HOME/virtualenvs
+export PIP_DOWNLOAD_CACHE=$HOME/virtualenvs/download_cache
 source /usr/local/bin/virtualenvwrapper.sh
 
 if [ -f ~/.my.secret.bashrc ]; then
