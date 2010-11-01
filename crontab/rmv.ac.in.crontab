@@ -14,19 +14,9 @@ scripty=/home/rmvadmin/scripts/scripty
 # Fill Cache
 0 3 * * * run_script $scripty/drupal/fill_boost_cache.sh
 
-###################### Redmine Related #######################
-#Freeup memeory used by ruby process (redmine)
-#@hourly sudo service redmine restart >/dev/null 2>&1
-
-# Delete and re-create cache for redmine pages
-#0 1 * * sun sudo $scripty/run_script $scripty/redmine/refresh_redmine_cache.sh
-
 ###################### Backups #######################
 # Take mysql backup
 @hourly run_script $scripty/mysql/backup_mysql.sh
-
-# Sync Repos in Bitbucket to GoogleCode and SF
-@daily run_script $scripty/mercurial/backup_mercurial_repos.sh
 
 # Refresh local repos
 @daily run_script $scripty/mercurial/sync_mercurial_repos.sh

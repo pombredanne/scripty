@@ -1,3 +1,4 @@
+Revision 74 	 2010-11-01 	 aliasing py to ipython 2.7 
 Revision 73 	 2010-10-21 	 changing virtualenv path 
 Revision 72 	 2010-10-21 	 Adding PIP_DOWNLOAD_CACHE to profile 
 Revision 71 	 2010-10-19 	 General cleanup 
