@@ -6,18 +6,17 @@ sf_projectname=vidyalaya
 
 bitbucket_repos()
 {
-# I know this code is ugly. But we have to bear with it until Bitbucket's API work properly.
 python << _EOF_1
 
 import urllib2
+import json
 
-url='http://bitbucket.org/${bitbucket_username}'
-all_html=urllib2.urlopen(url).read()
-repos_html = all_html.split('repository-list')[1].split('</table>')[0]
-for line in repos_html.split('\n'):
-    if 'href' in line:
-        repo = line.split('href=')[2].split('>')[0].strip('"').strip('/').split('/src')[0].split('/')[-1]
-        print repo
+url = 'https://api.bitbucket.org/1.0/users/${bitbucket_username}/'
+f = urllib2.urlopen(url)
+response = json.loads(f.read())
+
+for repo in response['repositories']:
+    print repo['slug']
 
 _EOF_1
 }

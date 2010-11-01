@@ -33,3 +33,7 @@ libs
 *.LOG
 *secret*
 *confidential*
+*.sqlite
+*.sqlite3
+*.db
+_build

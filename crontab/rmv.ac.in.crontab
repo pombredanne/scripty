@@ -18,9 +18,6 @@ scripty=/home/rmvadmin/scripts/scripty
 # Take mysql backup
 @hourly run_script $scripty/mysql/backup_mysql.sh
 
-# Refresh local repos
-@daily run_script $scripty/mercurial/sync_mercurial_repos.sh
-
 # Upload backups to Dropbox
 20 3 * * * run_script $scripty/backup/upload_to_dropbox.sh
 
