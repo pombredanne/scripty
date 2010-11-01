@@ -1,3 +1,4 @@
+Revision 77 	 2010-11-01 	 Fix for pysis cron job 
 Revision 76 	 2010-11-01 	 Correcting cron entry for pysis 
 Revision 75 	 2010-11-01 	 Deleting unnecessary entries from cron 
 Revision 74 	 2010-11-01 	 aliasing py to ipython 2.7 
