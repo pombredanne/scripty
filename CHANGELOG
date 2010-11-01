@@ -1,3 +1,4 @@
+Revision 73 	 2010-10-21 	 changing virtualenv path 
 Revision 72 	 2010-10-21 	 Adding PIP_DOWNLOAD_CACHE to profile 
 Revision 71 	 2010-10-19 	 General cleanup 
 Revision 70 	 2010-10-18 	 Adding bitbucket2github.sh to crontab 

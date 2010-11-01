@@ -21,6 +21,7 @@ alias cls=clear
 alias p="ping google.com"
 alias fgrep="find . -name \* -print0 | xargs -0 grep -i "
 alias vi="/usr/bin/vim"
+alias py="python2.7 `which ipython`"
 
 export TEMP="/tmp"
 
