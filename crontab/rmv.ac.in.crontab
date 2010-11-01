@@ -34,7 +34,7 @@ scripty=/home/rmvadmin/scripts/scripty
 
 ###################### Misc #######################
 # Send Birthday greetings everyday at 5am
-0 5 * * * $HOME/virtualenvs/pysis/bin/python /var/www/pysis/manage.py runjobs daily </dev/null 2>&1
+0 5 * * * /virtualenvs/pysis/bin/python /virtualenvs/pysis/bin/django-admin.py runjobs daily </dev/null 2>&1
 
 # Refresh Vidyalaya Blogs Planet
 @hourly run_script /var/www/blogs_planet/deploy/refresh_feeds.sh
