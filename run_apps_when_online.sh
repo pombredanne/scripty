@@ -14,7 +14,7 @@ run_apps()
         #Don't run the app if running already
         if ! pgrep -f "${app}" >/dev/null 2>&1;
         then
-            nohup ${app} >/dev/null 2>&1 &
+            ${app} &
         fi
     done < ${apps_to_run}
 }
