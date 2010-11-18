@@ -28,9 +28,9 @@ if [ -f ${REVISION_FILE} ]
 then
     sed -i /^revision/d ${REVISION_FILE}
     sed -i /^last_modified_timestamp/d ${REVISION_FILE}
-fi
 
-echo "revision = '$revision_number'
+    echo "revision = '$revision_number'
 last_modified_timestamp = '$last_modified_timestamp' " >> ${REVISION_FILE}
+fi
 
 hg log --template 'Revision {rev} \t {date|shortdate} \t {desc|firstline} \n' > ${PROJECT_ROOT}/CHANGELOG
