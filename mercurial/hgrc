@@ -2,7 +2,7 @@
 addremove = --similarity 75
 
 [ui]
-username = Dakshina Murthy <dkmurthy9@gmail.com>
+username = Ramana <sramana9@gmail.com>
 ignore = ~/.hgignore
 ssh = ssh -C
 
