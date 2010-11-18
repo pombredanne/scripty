@@ -1,3 +1,6 @@
+Revision 82 	 2010-11-18 	 Changing name in hgrc 
+Revision 81 	 2010-11-17 	 small change 
+Revision 80 	 2010-11-01 	 Fixing push_local_repos 
 Revision 79 	 2010-11-01 	 General cleanup 
 Revision 78 	 2010-11-01 	 Adding script to push all local repos 
 Revision 77 	 2010-11-01 	 Fix for pysis cron job 

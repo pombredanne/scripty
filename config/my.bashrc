@@ -39,25 +39,16 @@ alias hgsync="hg push; hg fetch"
 
 ########## Useful for server
 alias arestart="sudo service apache2 restart"
-alias lrestart="sudo service lighttpd restart"
 alias nrestart="sudo service nginx restart"
 alias rrestart="sudo service redmine restart"
 
 alias psmem="sudo python $SCRIPTY_DIR/third_party/ps_mem.py"
-
-########## Useful only in my laptop
-alias wiki="wine /media/OS/wikitaxi/WikiTaxi.exe /media/OS/wikitaxi/enwiki-20100312-pages-articles.taxi Venkata"
-alias mediacoder="wine /media/OS/Program\ Files/MediaCoder/mediacoder.exe"
-alias selenium_rc_start="java -jar $HOME/scripts/selenium/selenium-server-1.0.3/selenium-server.jar"
-
-alias mount_lan_server="smbmount //192.168.2.253/E\$ /media/lan_server -o user=SERVERMCA/bca3 password="
 
 ########## Rackspace related
 export MYSERVER="rmvadmin@173.203.194.68"
 
 alias rackspace="sshfs $MYSERVER:/home/rmvadmin/ /media/rackspace"
 alias sshrackspace="ssh $MYSERVER"
-
 
 ########## General
 export WORKON_HOME=/virtualenvs

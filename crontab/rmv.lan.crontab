@@ -14,9 +14,6 @@ scripty=/home/rmvadm/scripts/scripty
 # Create SVN Repos - Should be run as root
 */5 * * * *  sudo $scripty/redmine/create_svn_repos_for_redmine.sh >/dev/null 2>&1
 
-# Mirror to Rackspace Server (projects.rmv.ac.in)
-0 17 * * mon,thu run_script $scripty/redmine/mirror_redmine_on_rackspace.sh
-
 ################ Backups #################################
 # Take mysql backup
 @hourly run_script $scripty/mysql/backup_mysql.sh

@@ -2,7 +2,7 @@
 addremove = --similarity 75
 
 [ui]
-username = Ramana <sramana9@gmail.com>
+username = sramana <sramana9@gmail.com>
 ignore = ~/.hgignore
 ssh = ssh -C
 
@@ -11,13 +11,17 @@ allow_archive = bz2 gz zip
 style = gitweb
 
 [extensions]
-fetch = 
+fetch =
 hgext.keyword=
 hgext.convert=
-hgext.mq = 
-hgk = 
+hgext.mq =
+hgk =
 hgext.bookmarks =
 hggit =
+
+[hooks]
+pre-commit.versioning = /scripts/scripty/mercurial/create_revision_file.sh
+post-push = python:/scripts/scripty/mercurial/github_mirror.py:post_push
 
 [keyword]
 ** =

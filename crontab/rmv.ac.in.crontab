@@ -21,10 +21,6 @@ scripty=/home/rmvadmin/scripts/scripty
 # Upload backups to Dropbox
 20 3 * * * run_script $scripty/backup/upload_to_dropbox.sh
 
-# Backup Github and Bitbucket to Sourceforge
-10 2 * * * run_script $scripty/backup/backup_github_repos_to_sourceforge.sh
-20 2 * * * run_script $scripty/backup/backup_bitbucket_repos_to_sourceforge.sh
-
 # Backup Bitbucket to GitHub
 40 2 * * * run_script $scripty/backup/bitbucket2github.sh
 
