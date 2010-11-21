@@ -1,3 +1,7 @@
+Revision 86 	 2010-11-20 	 small typo 
+Revision 85 	 2010-11-20 	 README 
+Revision 84 	 2010-11-18 	 Change to create_revision_file 
+Revision 83 	 2010-11-18 	 Lot of changes 
 Revision 82 	 2010-11-18 	 Changing name in hgrc 
 Revision 81 	 2010-11-17 	 small change 
 Revision 80 	 2010-11-01 	 Fixing push_local_repos 
