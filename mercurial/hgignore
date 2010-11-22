@@ -36,4 +36,6 @@ libs
 *.sqlite
 *.sqlite3
 *.db
+*.egg-info
 _build
+_dist

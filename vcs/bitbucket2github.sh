@@ -2,9 +2,14 @@
 
 # This script backs up all public repos of a BitBucket user to GitHub.
 
-bitbucket_username=dkmurthy
-github_username=dkmurthy
-github_api_token=$GITHUB_API_TOKEN
+get()
+{
+    python -m vault get $1 $2
+}
+
+bitbucket_username=`get bitbucket.org username`
+github_username=`get github.com username`
+github_api_token=`get bitbucket.org ${github_username}`
 
 bitbucket_repos()
 {
