@@ -23,7 +23,7 @@ Contributions and Feedback are most welcome. Please email the author with your c
 
 Author Information
 -----------------------------------------
-Sramana <sramana9@gmail.com>
+Ramana <sramana9@gmail.com>
 
 * http://bitbucket.org/sramana
 * http://github.com/sramana
