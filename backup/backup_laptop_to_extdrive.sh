@@ -11,6 +11,7 @@ backup()
 
     truecrypt --mount --password=$password $dest $tmp
     rsync -avz --progress --delete $src/ $tmp/
+    echo "Last backed up on `date`" > /$tmp/last_update.log
     truecrypt --dismount $dest
 }
 
@@ -22,3 +23,5 @@ backup /home/ramana /backup/home_truecrypt
 
 # Backup data
 rsync -avz --progress --delete /data/ /backup/data/
+
+echo "Last backed up on `date`" > /backup/data/last_update.log

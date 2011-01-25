@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apps_to_run=~/run_apps_when_online.txt
+apps_to_run=${HOME}/run_apps_when_online.txt
 
 check_internet_connection()
 {
