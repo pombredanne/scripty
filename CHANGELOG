@@ -1,3 +1,7 @@
+Revision 96 	 2011-02-02 	 change to crontab 
+Revision 95 	 2011-02-02 	 Adding mp4tomp3 
+Revision 94 	 2011-02-02 	 Adding upload_to_archive.py 
+Revision 93 	 2011-01-25 	 Changing laptop.crontab 
 Revision 92 	 2011-01-25 	 Lot of changes and cleanup 
 Revision 91 	 2010-12-07 	 adding backup_laptop_to_extdrive.sh 
 Revision 90 	 2010-12-07 	 Adding move_to_archives.sh 
