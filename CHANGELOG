@@ -1,3 +1,5 @@
+Revision 98 	 2011-02-02 	 Adding wordpress file perms script 
+Revision 97 	 2011-02-02 	 Adding send_mail.py 
 Revision 96 	 2011-02-02 	 change to crontab 
 Revision 95 	 2011-02-02 	 Adding mp4tomp3 
 Revision 94 	 2011-02-02 	 Adding upload_to_archive.py 
