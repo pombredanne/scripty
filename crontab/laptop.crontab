@@ -3,3 +3,4 @@
 @reboot sleep 60 && sudo service supervisor start
 @reboot sleep 60 && sudo service mysql start
 @reboot sleep 30 && /work/scripty/misc/run_apps_when_online.sh
+@reboot alltray gtg
