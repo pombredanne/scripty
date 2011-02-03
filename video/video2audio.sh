@@ -6,5 +6,5 @@ shopt -s nullglob
 for input in *.mp4 *.avi
 do
     output=${input%\.*}.mp3
-    ffmpeg -vn -ab 24k -i "$input" "$output"
+    ffmpeg -i "$input" -vn -ab 24k "$output"
 done
