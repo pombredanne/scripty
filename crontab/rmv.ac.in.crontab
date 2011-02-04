@@ -4,16 +4,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/home/rmvadmin
 BASH_ENV=/home/rmvadmin/.my.bashrc
 scripty=/home/rmvadmin/scripts/scripty
 
-###################### Drupal Related #######################
-# Run drupal cron
-@daily wget -O - -t 1 http://rmv.ac.in/supercron.php >/dev/null 2>&1
-
-# Push Drupal website to Bitbuket private repository
-0 4 * * * run_script $scripty/drupal/push_drupal_to_bitbucket.sh
-
-# Fill Cache
-0 3 * * * run_script $scripty/drupal/fill_boost_cache.sh
-
 ###################### Backups #######################
 # Take mysql backup
 @hourly run_script $scripty/mysql/backup_mysql.sh
@@ -22,7 +12,7 @@ scripty=/home/rmvadmin/scripts/scripty
 20 3 * * * run_script $scripty/backup/upload_to_dropbox.sh
 
 # Backup Bitbucket to GitHub
-40 2 * * * run_script $scripty/backup/bitbucket2github.sh
+#40 2 * * * run_script $scripty/backup/bitbucket2github.sh
 
 
 ###################### Misc #######################
