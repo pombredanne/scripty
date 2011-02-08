@@ -20,4 +20,4 @@ scripty=/home/rmvadmin/scripts/scripty
 0 5 * * * export DJANGO_SETTINGS_MODULE=pysis.settings.settings && /virtualenvs/pysis/bin/python /virtualenvs/pysis/bin/django-admin.py runjobs daily >/dev/null 2>&1
 
 # Refresh Vidyalaya Blogs Planet
-@hourly run_script /var/www/planet_vidyalaya/deploy/refresh_feeds.sh
+0 1 * * * run_script /var/www/planet_vidyalaya/deploy/refresh_feeds.sh
