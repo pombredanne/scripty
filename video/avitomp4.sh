@@ -50,7 +50,7 @@ else
     exit 1
 fi
 
-for input in *.avi
+for input in *.avi *.mpg
 do
     echo "Processing $input"
 
@@ -61,7 +61,7 @@ do
         -i "$input" \
         -an \
         -pass 1 \
-        -vcodec libx264 -vpre slow_firstpass -threads 0 -b $vbitrate -s $size \
+        -vcodec libx264 -vpre slow_firstpass -threads 0 -r 24 -b $vbitrate -s $size \
         -y -timestamp now \
         "$output"
 
@@ -70,7 +70,7 @@ do
         -i "$input" \
         -acodec libfaac -ab $abitrate -ac $achannels \
         -pass 2 \
-        -vcodec libx264 -vpre slow -threads 0 -b $vbitrate -s $size \
+        -vcodec libx264 -vpre slow -threads 0 -r 24 -b $vbitrate -s $size \
         -y -timestamp now \
         "$output"
 done
