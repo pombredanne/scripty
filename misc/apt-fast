@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+#Enabling autocompletion
+bash . /etc/bash_completion
+
+# Check for proper priveliges
+[ "`whoami`" = root ] || exec sudo "$0" "$@"
+
+
+if echo "$@" | grep -q "upgrade\|install\|dist-upgrade"
+then
+
+  cd /var/cache/apt/archives/
+
+  apt-get -y --print-uris $@ | egrep -o -e "(ht|f)tp://[^\']+" | xargs -l3 -P5 wget -N --continue
+fi
+
+apt-get $@;
