@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-root="/var/www/vidyalaya_wordpress"
+root=`hg root`
 me=$USER
 www="www-data"
 

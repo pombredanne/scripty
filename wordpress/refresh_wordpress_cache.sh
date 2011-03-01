@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-root=/var/www/vidyalaya_wordpress
+root=`hg root`
 
 sudo rm -rf $root/wp-content/cache/supercache/*
 
