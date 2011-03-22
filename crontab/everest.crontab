@@ -1,0 +1,10 @@
+# min hour dom mon dow command
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/home/ramana/scripts/scripty
+BASH_ENV=/home/ramana/.my.bashrc
+scripty=/home/ramana/scripts/scripty
+
+
+###################### Backups #######################
+0 3 * * wed python /home/ramana/scripts/archiver/archive_posterous_docs_to_archive.org.py >/dev/null 2>&1
+0 3 * * tue python /home/ramana/scripts/archiver/archive_flickr_photos_to_archive.org.py >/dev/null 2>&1
