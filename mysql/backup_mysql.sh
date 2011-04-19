@@ -10,20 +10,30 @@ db_user=root
 
 backup_dest=${HOME}/backups/mysql_dumps
 
-offpeak_hour=16
+offpeak_hour=04
 this_hour=`date +%H`
-this_day_of_week=`date +%w`
-this_day_of_month=`date +%d`
 
 ####### Take MySQL Backup #################
 echo "`date` : Dumping DBs"
-echo "select schema_name from schemata where schema_name != 'information_schema'" >query.sql
-for db_name in `mysql -s -r -h ${db_src} -u ${db_user} information_schema <query.sql`
+
+databases=`mysql \
+            --silent \
+            --raw \
+            --host=${db_src} \
+            --user=${db_user} \
+            --execute="select schema_name from schemata where schema_name != 'information_schema'" \
+            information_schema`
+
+for database in ${databases}
 do
-  mysqldump --order-by-primary --skip-extended-insert \
-            -h ${db_src} -u ${db_user} ${db_name} > ${db_dest}/${db_name}_${HOSTNAME}.sql
+    mysqldump \
+        --order-by-primary \
+        --skip-extended-insert \
+        --host=${db_src} \
+        --user=${db_user} \
+        ${database} \
+        > ${db_dest}/${database}.${HOSTNAME}.sql
 done
-rm query.sql
 
 echo "`date` : Taking Backup"
 rdiff-backup ${db_dest} ${backup_dest}
