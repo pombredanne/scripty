@@ -11,8 +11,8 @@ scripty=/home/rmvadmin/scripts/scripty
 # Upload backups to Dropbox
 20 3 * * * run_script $scripty/backup/upload_to_dropbox.sh
 
-# Backup Bitbucket to GitHub
-#40 2 * * * run_script $scripty/backup/bitbucket2github.sh
+# Backup to everest
+50 4 * * * run_script $scripty/backup/backup_linode_to_everest.sh
 
 ###################### Wordpress #######################
 0 2 * * * run_script $scripty/wordpress/refresh_wordpress_cache.sh /var/www/vidyalaya_wordpress http://rmv.ac.in
