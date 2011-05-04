@@ -6,7 +6,7 @@
 # To use this script, put these two lines in .hg/hgrc file of the project repo
 #
 # [hooks]
-# pre-commit.versioning = /path_to/create_version_file.sh
+# pre-commit.versioning = /work/scripty/mercurial/create_revision_file.sh
 
 
 PROJECT_ROOT=`hg root`

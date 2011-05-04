@@ -1,3 +1,25 @@
+Revision 122 	 2011-05-04 	 Fixing the bookmarks issue with mercurial 1.8 in github_mirror.py 
+Revision 121 	 2011-05-04 	 Changes to crontab 
+Revision 120 	 2011-04-20 	 Adding backup_linode_to_everest.sh to crontab 
+Revision 119 	 2011-04-20 	 Adding secondary backup for linde 
+Revision 118 	 2011-04-20 	 Adding secondary backup for linde 
+Revision 117 	 2011-04-20 	 Updating dropbox script 
+Revision 116 	 2011-04-19 	 Cleaning up backup_mysql.sh 
+Revision 115 	 2011-04-05 	 Adding avi2svi.sh 
+Revision 114 	 2011-04-05 	 Renaming avitomp4.sh to avi2mp4.sh 
+Revision 113 	 2011-03-29 	 Wordpress changes 
+Revision 112 	 2011-03-22 	 Adding everest crontab 
+Revision 111 	 2011-03-01 	 Trivial change 
+Revision 110 	 2011-02-24 	 adding apt-fast 
+Revision 109 	 2011-02-24 	 Adding wordpress to rmv.ac.in crontab 
+Revision 108 	 2011-02-17 	 Adding list_uncommited_repos.sh 
+Revision 107 	 2011-02-08 	 Changing crontab 
+Revision 106 	 2011-02-08 	 Small changes 
+Revision 105 	 2011-02-07 	 Changes to video 
+Revision 104 	 2011-02-06 	 Changes to avitomp4.sh 
+Revision 103 	 2011-02-04 	 Automated merge with ssh://bitbucket.org/sramana/scripty 
+Revision 102 	 2011-02-04 	 Changes to rmv.ac.in crontab 
+Revision 101 	 2011-02-04 	 Adding script to refresh wordpress superccahe 
 Revision 100 	 2011-02-03 	 Correcting the parameters in ffmpeg 
 Revision 99 	 2011-02-02 	 small changes 
 Revision 98 	 2011-02-02 	 Adding wordpress file perms script 
@@ -46,24 +68,24 @@ Revision 56 	 2010-08-30 	 Backup hg repos to github.com using hg-git
 Revision 55 	 2010-08-23 	 Changing Greetings app 
 Revision 54 	 2010-08-10 	 Changing VERSION to version.py to make imports easier 
 Revision 53 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Revision 52 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Revision 51 	 2010-08-09 	 Small Changes 
-Revision 50 	 2010-08-09 	 added pysis to backups 
+Revision 52 	 2010-08-09 	 added pysis to backups 
+Revision 51 	 2010-08-09 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Revision 50 	 2010-08-09 	 Small Changes 
 Revision 49 	 2010-07-30 	 Fixing issue with fill_boost_cache.sh 
 Revision 48 	 2010-07-28 	 Delete http_proxy 
 Revision 47 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Revision 46 	 2010-07-16 	 Automated merge with ssh://hg@bitbucket.org/dkmurthy/scripty 
-Revision 45 	 2010-07-16 	 Small cleanup to mercurial/sync_mercurial_repos.sh 
-Revision 44 	 2010-07-16 	 Adding BASH_ENV variable to crontab 
-Revision 43 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
-Revision 42 	 2010-07-15 	 Cleanup of run_apps_when_online.sh 
-Revision 41 	 2010-07-15 	 Added crontab entry to sync mercurial repos in LAN 
-Revision 40 	 2010-07-15 	 Added fetch_vidyalaya_active_directory_repo.sh 
-Revision 39 	 2010-07-15 	 Cleanup of update_redmine_on_server.sh script 
-Revision 38 	 2010-07-15 	 Added hgsync alias 
-Revision 37 	 2010-07-15 	 Adding vidyalaya-active-directory back to the list of repos 
-Revision 36 	 2010-07-15 	 http_proxy for lan 
-Revision 35 	 2010-07-16 	 Change to push_drupal_to_bitbucket.sh 
+Revision 46 	 2010-07-16 	 Change to push_drupal_to_bitbucket.sh 
+Revision 45 	 2010-07-16 	 Automated merge with ssh://hg@bitbucket.org/dkmurthy/scripty 
+Revision 44 	 2010-07-16 	 Small cleanup to mercurial/sync_mercurial_repos.sh 
+Revision 43 	 2010-07-16 	 Adding BASH_ENV variable to crontab 
+Revision 42 	 2010-07-16 	 Automated merge with ssh://bitbucket.org/dkmurthy/scripty 
+Revision 41 	 2010-07-15 	 Cleanup of run_apps_when_online.sh 
+Revision 40 	 2010-07-15 	 Added crontab entry to sync mercurial repos in LAN 
+Revision 39 	 2010-07-15 	 Added fetch_vidyalaya_active_directory_repo.sh 
+Revision 38 	 2010-07-15 	 Cleanup of update_redmine_on_server.sh script 
+Revision 37 	 2010-07-15 	 Added hgsync alias 
+Revision 36 	 2010-07-15 	 Adding vidyalaya-active-directory back to the list of repos 
+Revision 35 	 2010-07-15 	 http_proxy for lan 
 Revision 34 	 2010-07-14 	 Typo in rmv.ac.in crontab 
 Revision 33 	 2010-07-14 	 Added refresh_redmine_cache.sh to crontab 
 Revision 32 	 2010-07-13 	 Making mysqldump VCS friendly 
