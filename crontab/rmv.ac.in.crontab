@@ -14,11 +14,14 @@ scripty=/home/rmvadmin/scripts/scripty
 # Backup to everest
 50 4 * * * run_script $scripty/backup/backup_linode_to_everest.sh
 
+# Backup to Bitbucket
+0 3 * * * cd /var/www/rmv.ac.in && fab push
+0 3 * * * cd /var/www/rkmvucbe.org && fab push
+0 3 * * * cd /var/www/vivekanandawiki.org && fab push
+
 ###################### Wordpress #######################
-0 2 * * * run_script $scripty/wordpress/refresh_wordpress_cache.sh /var/www/vidyalaya_wordpress http://rmv.ac.in
-30 2 * * * run_script $scripty/wordpress/refresh_wordpress_cache.sh /var/www/rkmvucbe http://rkmvucbe.org
-0 3 * * * cd /var/www/vidyalaya_wordpress && fab push
-10 3 * * * cd /var/www/wiki && fab push
+0 2 * * * run_script $scripty/wordpress/refresh_wordpress_cache.sh /var/www/rmv.ac.in http://rmv.ac.in
+30 2 * * * run_script $scripty/wordpress/refresh_wordpress_cache.sh /var/www/rkmvucbe.org http://rkmvucbe.org
 
 
 ###################### Misc #######################
