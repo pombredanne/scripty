@@ -19,7 +19,7 @@ backup()
 backup /work /backup/work_truecrypt
 
 # Backup home
-backup /home/ramana /backup/home_truecrypt
+backup $HOME /backup/home_truecrypt
 
 # Backup data
 rsync -avz --progress --delete /data/ /backup/data/
