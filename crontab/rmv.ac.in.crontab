@@ -32,4 +32,4 @@ scripty=/home/rmvadmin/scripts/scripty
 0 1 * * * run_script /var/www/planet_vidyalaya/deploy/refresh_feeds.sh
 
 # Post daily quotes by Vivekananda
-0 6 * * * run_script python $scripty/misc/quote_of_the_day.py
+0 6 * * * run_script $scripty/misc/quote_of_the_day.py
