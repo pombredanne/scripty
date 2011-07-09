@@ -4,21 +4,14 @@ import os
 import requests
 from BeautifulSoup import BeautifulSoup
 from logbook import debug, info, warn, error
-from logbook import FileHandler
 import tumblr
+import vault
 
 url = 'http://www.vivekananda.org'
 blog = 'swamiji.tumblr.com'
-username = os.environ['TUMBLR_USERNAME']
-password = os.environ['TUMBLR_PASSWORD']
 
-
-def start_logging(filename):
-    this_file = os.path.basename(filename)
-    log_file = '/var/log/' + this_file + '.log'
-
-    log_handler = FileHandler(log_file, bubble=True)
-    log_handler.push_application()
+username = vault.get('tumblr', 'username')
+password = vault.get('tumblr', 'password')
 
 
 def fetch_quote():
@@ -41,10 +34,10 @@ def post_to_tumblr(quote):
 
 
 def main():
+    debug("="*50)
     quote = fetch_quote()
     post_to_tumblr(quote)
 
 
 if __name__ == "__main__":
-    start_logging(__file__)
     main()
