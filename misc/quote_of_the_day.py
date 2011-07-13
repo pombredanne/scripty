@@ -5,13 +5,13 @@ import requests
 from BeautifulSoup import BeautifulSoup
 from logbook import debug, info, warn, error
 import tumblr
-import vault
+import cofre
 
 url = 'http://www.vivekananda.org'
 blog = 'swamiji.tumblr.com'
 
-username = vault.get('tumblr', 'username')
-password = vault.get('tumblr', 'password')
+username = cofre.get('tumblr_username')
+password = cofre.get('tumblr_password')
 
 
 def fetch_quote():

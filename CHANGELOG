@@ -1,3 +1,4 @@
+Revision 131 	 2011-07-09 	 Small fix to quote_of_the_day 
 Revision 130 	 2011-07-08 	 Refactoring quote_of_the_day.py 
 Revision 129 	 2011-07-07 	 Fixing crontab 
 Revision 128 	 2011-07-07 	 Fixing crontab 
