@@ -1,3 +1,4 @@
+Revision 132 	 2011-07-13 	 Using cofre for storing passwords in quote_of_the_day.py 
 Revision 131 	 2011-07-09 	 Small fix to quote_of_the_day 
 Revision 130 	 2011-07-08 	 Refactoring quote_of_the_day.py 
 Revision 129 	 2011-07-07 	 Fixing crontab 

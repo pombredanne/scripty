@@ -10,7 +10,7 @@ backup()
     mkdir $tmp
 
     truecrypt --mount --password=$password $dest $tmp
-    rsync -avz --progress --delete $src/ $tmp/
+    rsync -av --progress --delete $src/ $tmp/
     echo "Last backed up on `date`" > /$tmp/last_update.log
     truecrypt --dismount $dest
 }
@@ -22,6 +22,6 @@ backup /work /backup/work_truecrypt
 backup $HOME /backup/home_truecrypt
 
 # Backup data
-rsync -avz --progress --delete /data/ /backup/data/
+rsync -av --progress --delete /data/ /backup/data/
 
 echo "Last backed up on `date`" > /backup/data/last_update.log
