@@ -28,6 +28,8 @@ def fetch_quote():
 
 
 def post_to_tumblr(quote):
+    if 'Microsoft' in quote:
+        return
     debug("Publishing to Tumblr")
     api = tumblr.Api(blog, username, password)
     api.write_quote(quote=quote, source="Swami Vivekananda")
