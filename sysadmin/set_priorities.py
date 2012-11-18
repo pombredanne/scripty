@@ -5,6 +5,7 @@ import psutil
 prio = {
     'nginx': 'HIGH',
     'mysqld': 'HIGH',
+    'supervisord': 'HIGH',
     'uwsgi': 'HIGH',
     'php-cgi': 'HIGH',
 
