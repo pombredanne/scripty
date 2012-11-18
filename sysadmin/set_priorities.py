@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import psutil
+from prettytable import PrettyTable
 
 prio = {
     'nginx': 'HIGH',
@@ -16,6 +17,7 @@ prio = {
 nice = dict(HIGH=-10, LOW=15, VERY_LOW=19)  # -20 to 19
 ionice = dict(HIGH=0, LOW=5, VERY_LOW=7)    # 0 to 7
 
+t = PrettyTable(["PID", "Name", "Old nice", "New nice", "Old ionice", "New ionice"])
 processes = [p for p in psutil.process_iter() if p.name in prio]
 
 for p in processes:
@@ -25,8 +27,6 @@ for p in processes:
     p.set_nice(nice[priority])
     p.set_ionice(psutil.IOPRIO_CLASS_BE, ionice[priority])
 
-    print "%s \n old_nice=%s, new_nice=%s \n old_ionice=%s, new_ionice=%s" % (
-        p,
-        old_nice, p.get_nice(),
-        old_ionice, p.get_ionice().value)
+    t.add_row([p.pid, p.name, old_nice, p.get_nice(), old_ionice, p.get_ionice().value])
 
+print t.get_string(sortby="Name")
