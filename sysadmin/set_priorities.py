@@ -15,7 +15,7 @@ prio = {
     'tor': 'VERY_LOW'
 }
 nice = dict(HIGH=-10, LOW=15, VERY_LOW=19)  # -20 to 19
-ionice = dict(HIGH=0, LOW=5, VERY_LOW=7)    # 0 to 7
+ionice = dict(HIGH=0, LOW=6, VERY_LOW=7)    # 0 to 7
 
 t = PrettyTable(["PID", "Name", "Old nice", "New nice", "Old ionice", "New ionice"])
 processes = [p for p in psutil.process_iter() if p.name in prio]
